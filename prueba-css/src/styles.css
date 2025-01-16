@@ -1,7 +1,46 @@
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", sans-serif;
-    height: 100%;
-    width: 100%;
-  }
-  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
+  height: 100%;
+  width: 100%;
+
+  background-color: #0d4073;
+  background-image: url("../../prueba-css/src/assets/bg-triangles.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+h1 {
+  font-weight: normal;
+  color: #fff;
+}
+
+h1::after {
+  content: url("../../prueba-css/src/assets/logo.svg");
+  display: inline-block;
+  margin-left: 100px;
+  vertical-align: middle;
+}
+
+h2 {
+  font-weight: normal; /*revisar realmente si estos titles llevan o no bold*/
+  color: #12dff4;
+}
+
+div:nth-child(1) {
+  color: #fff;
+}
+
+div:nth-child(1) b {
+  font-weight: bold;
+}
+li::marker {
+  color: #12dff4;
+}
+
+h2:nth-of-type(3),
+h2:nth-of-type(4),
+h2:nth-of-type(5) {
+  font-weight: bold;
+  color: #306192;
+}
