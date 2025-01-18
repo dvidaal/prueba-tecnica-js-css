@@ -24,6 +24,7 @@ document.getElementById("app").innerHTML = `
       <h2>Test Data</h2>
         <div>[1, 2, 3, 3, 2, 1, 4]</div>
     </div>
+    
     <div class="container-results">
     <div class="expected-result">
       <h2>Expected Result</h2>
