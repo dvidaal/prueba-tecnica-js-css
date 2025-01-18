@@ -166,11 +166,4 @@ h2:nth-of-type(5) {
     align-items: center;
     gap: 20px;
   }
-
-  aside,
-  section,
-  .expected-result,
-  .your-result {
-    width: 100%;
-  }
 }
