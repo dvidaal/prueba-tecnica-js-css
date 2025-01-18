@@ -1,7 +1,176 @@
+:root {
+  --color-background: #0d4073;
+  --color-header-text: #fff;
+  --color-target: #12dff4;
+  --color-test-data-bg: #79a6d2;
+  --color-test-data-text: #0e4172;
+  --color-expected-bg: #a5d321;
+  --color-your-result-bg: #c52d96;
+  --color-subheading: #306192;
+  --color-marker: #12dff4;
+}
+
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", sans-serif;
-    height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
+  background-color: #0d4073;
+  background-image: url("../../prueba-css/src/assets/bg-triangles.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 55px;
+  height: 70px;
+  align-items: center;
+}
+
+h1 {
+  font-weight: normal;
+  color: var(--color-header-text);
+  flex-direction: column;
+  font-size: 4rem;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 55px;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-right: 30px;
+}
+
+h2 {
+  font-weight: bold;
+  color: var(--color-target);
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.2;
+}
+
+li {
+  margin-left: 30px;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.test-data {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--color-test-data-bg);
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+.test-data h2 {
+  color: var(--color-test-data-text);
+}
+
+.container-results {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+}
+
+.container-results h2 {
+  color: var(--color-test-data-text);
+}
+
+.expected-result,
+.your-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.expected-result h2 {
+  margin: 0;
+  text-align: center;
+  background-color: var(--color-expected-bg);
+  padding: 30px;
+}
+
+.your-result h2 {
+  margin: 0;
+  text-align: center;
+  background-color: var(--color-your-result-bg);
+  padding: 30px;
+}
+
+.expected-result div {
+  margin: 0;
+  text-align: center;
+  background-color: var(--color-expected-bg);
+  padding: 30px;
+  font-size: 3rem;
+}
+
+.your-result div {
+  margin: 0;
+  text-align: center;
+  background-color: var(--color-your-result-bg);
+  padding: 30px;
+  font-size: 3rem;
+  border-radius: 0 0 10px 0;
+}
+
+div:nth-child(1) {
+  color: var(--color-header-text);
+}
+
+div:nth-child(1) b {
+  font-weight: bold;
+}
+li::marker {
+  color: var(--color-marker);
+}
+
+h2:nth-of-type(3),
+h2:nth-of-type(4),
+h2:nth-of-type(5) {
+  font-weight: bold;
+  color: var(--color-subheading);
+}
+
+@media (max-width: 992px) {
+  .main-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  aside,
+  section,
+  .expected-result,
+  .your-result {
     width: 100%;
   }
-  
+}
